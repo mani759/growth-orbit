@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- Smooth scroll for anchor links ---------- */
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href').slice(1);
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ---------- Accordion (accessible) ---------- */
+  // Accordion for FAQ section
   document.querySelectorAll('.acc-btn').forEach(btn => {
     btn.addEventListener('click', function () {
       const panel = this.nextElementSibling;
@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ---------- Reveal on scroll (Intersection Observer) ---------- */
+  // Reveal on scroll animations
   const revealEls = document.querySelectorAll(
-    '.service-card, .compare-card, .team-card, .portrait-card, .why-right-section, .acc-item'
+    '.service-card, .compare-card, .team-card, .portrait-card, .why-right-section, .acc-item, .testimonial-card'
   );
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   revealEls.forEach(el => revealObserver.observe(el));
 
-  /* ---------- Keyboard accessibility for buttons ---------- */
+  // Keyboard accessibility for buttons
   document.querySelectorAll('.btn').forEach(b => {
     b.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
