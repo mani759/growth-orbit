@@ -638,6 +638,113 @@ body {
   font-size: 13px;
   font-weight: 500;
 }
+.team-card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+  background: rgba(255,255,255,0.94);
+  padding: 8px 14px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(12px) scale(0.97);
+  transition: all 0.3s cubic-bezier(.25,1.7,.59,.88);
+  z-index: 2;
+}
+
+.team-card:hover .social-icons {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #666;
+  background: transparent;
+  font-size: 22px;
+  transition: all 0.3s cubic-bezier(.25,1.7,.59,.88);
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* LinkedIn blue on hover */
+.social-link.linkedin:hover {
+  background-color: #0a66c2;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(10,102,194,0.13);
+  transform: scale(1.08) rotate(-6deg);
+}
+
+/* Instagram gradient on hover */
+.social-link.instagram {
+  background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 40%, #dc2743 70%, #cc2366 95%, #bc1888 100%);
+  color: #fff;
+  opacity: 0.88;
+}
+
+.social-link.instagram:hover {
+  filter: brightness(1.05);
+  opacity: 1;
+  transform: scale(1.08) rotate(6deg);
+  box-shadow: 0 4px 12px rgba(224, 108, 131, 0.16);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .social-icons {
+    bottom: 11px;
+    right: 11px;
+    gap: 7px;
+    padding: 6px 8px;
+    border-radius: 11px;
+  }
+  .social-link {
+    width: 31px;
+    height: 31px;
+    font-size: 17px;
+  }
+  .social-link svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+@media (max-width: 600px) {
+  .social-icons {
+    opacity: 1;
+    transform: none;
+    bottom: 8px;
+    right: 8px;
+    gap: 6px;
+    padding: 3px 6px;
+    border-radius: 10px;
+  }
+  .social-link {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+  }
+  .social-link svg {
+    width: 13px;
+    height: 13px;
+  }
+}
 
 .accordion {
   max-width: 100%;
