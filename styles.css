@@ -1503,6 +1503,23 @@ body {
   font-weight: 500;
 }
 
+.result{
+  background-color: #ffffff;
+  width: 52%;
+
+  text-decoration: none;
+  color: #5a5e5d;
+  transition: all 0.3s ease;
+}
+.result:hover{
+  background-color: green;
+  color: #3df4eb;
+  box-shadow: 0 12px 30px rgba(56, 208, 116, 0.25);
+  transform: translateY(-3px) scale(1.03);
+  
+  
+}
+
 @media (max-width: 1100px) {
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
 }
