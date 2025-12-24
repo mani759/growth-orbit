@@ -82,7 +82,7 @@ body {
 
 .nav-list {
   display: flex;
-  gap: 28px;
+  gap: 38px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1054,9 +1054,9 @@ body {
     height: 36px;
   }
 
-  .top-nav {
+  /* .top-nav {
     display: none;
-  }
+  } */
 
   .mobile-cta {
     display: flex;
@@ -1585,3 +1585,144 @@ body {
   border-radius: 20px;
 }
 
+/* Hamburger button */
+/* .menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+} */
+
+/* Desktop nav */
+.top-nav {
+  display: block;
+}
+
+/* Mobile styles */
+/* @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .top-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    background: #0b2e2b;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    z-index: 999;
+  }
+
+  .top-nav.active {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-link {
+    color: #fff;
+  }
+  
+}*/
+
+
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} 
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .header-actions {
+    margin-left: auto; /* push to right */
+  }
+}
+
+.menu-toggle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.mobile-cta {
+  opacity: 0.9;
+}
+/* ================= HEADER FIX (FINAL) ================= */
+
+/* Desktop defaults */
+.menu-toggle,
+.mobile-cta,
+.header-actions {
+  display: none;
+}
+
+/* Desktop nav */
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Mobile header */
+@media (max-width: 768px) {
+
+  /* Show mobile actions */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mobile-cta {
+    display: flex;
+  }
+
+  /* Hide desktop nav initially */
+  .top-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 16px;
+    background: #0b2e2b;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    z-index: 999;
+  }
+
+  .top-nav.active {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-link {
+    color: #fff;
+  }
+}

@@ -70,3 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+//  hamburger menu button..........
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".top-nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
